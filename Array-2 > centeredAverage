@@ -1,0 +1,12 @@
+public int centeredAverage(int[] nums) {
+ int sum = 0;
+ int largest = nums[0];
+ int smallest = nums[0];
+ for (int n : nums) {
+ largest = Math.max(largest, n);
+ smallest = Math.min(smallest, n);
+ sum += n; // sum = sum + n;
+ }
+ sum -= (largest + smallest); // sum = sum - (largest + smallest);
+ return sum / (nums.length - 2);
+}
