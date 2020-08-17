@@ -1,0 +1,9 @@
+public int bigDiff(int[] nums) {
+ int largest = nums[0];
+ int smallest = nums[0];
+ for (int n : nums) {
+ largest = Math.max(largest, n);
+ smallest = Math.min(smallest, n);
+ }
+ return largest - smallest;
+}
